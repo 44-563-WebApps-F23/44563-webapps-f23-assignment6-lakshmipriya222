@@ -21,10 +21,10 @@
 <p id="result">Right/Wrong</p>
 
 <script> 
-
-function checkAuthor(){
-    let good = 0;
+let good = 0;
     let oops = 0;
+function checkAuthor(){
+    
     secret_author = document.getElementById("hidden_author").value
     guess_Author = document.getElementById("guess_author").value
     
@@ -35,9 +35,15 @@ function checkAuthor(){
         results.innerHTML = `Correct Guess ${good}`;
     } else {
         oops++;
+        if(oops > 7){
+            document.getElementById("disaplay").onclick=guesses();
+        }
         alert("Sorry");
         results.innerHTML = `Wrong Guess ${oops}`;
     }
+}
+function guesses(){
+    alert("Sorry you run out of guesses");
 }
 </script>
 
