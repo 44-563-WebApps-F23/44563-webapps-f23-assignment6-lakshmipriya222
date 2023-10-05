@@ -41,25 +41,25 @@ function checkAuthor(){
 }
 </script>
 
-<div class="image">
+<div class="author">
     <img src="Austin.jpg" alt="austin" width="100px" height="100px" id="image">
     <input type="button" value="Change Image" onclick="selectImage()">
 </div>
 <script>
     var useImage = 1;
-    var img = document.querySelector('#image');
+    var a = document.querySelector('#image');
     function selectImage(){
         switch(useImage){
             case 1:
-                img.src = 'London.jpg';
+                a.src = 'London.jpg';
                 useImage = 2;
                 break;
             case 2:
-                img.src = 'Rio.jpg';
+                a.src = 'Rio.jpg';
                 useImage = 3;
                 break;
             case 3:
-                img.src = 'Austin.jpg';
+                a.src = 'Austin.jpg';
                 useImage = 1;   
                 break;
         }
